@@ -15,13 +15,6 @@ class Parameters extends Simpla
 	{
 	private $parameters = array();
 	private $parameter;
-	/*
-	*
-	*  Вывод параметров для товара
-	*  @param parameters
-	*
-	*
-	*/
 
 	public function __construct(){
 		parent::__construct();
@@ -33,7 +26,7 @@ class Parameters extends Simpla
                 $this->parameters = array();
                 // Выбираем из базы валюты
     $query = "SELECT parameters_id, stock_parameters FROM __parameters";
-                $this->db->query($query);                                                                         //print_r($this->db->results());
+                $this->db->query($query);
                 $results = $this->db->results();
 
                 foreach($results as $c)
@@ -43,20 +36,19 @@ class Parameters extends Simpla
                 /*возвращает первый елемент с массива если массив пуст*/
                 $this->parameter = reset($this->parameters);
         }
+	 /*
+        *
+        *  Вывод параметров для товара
+        *  @param parameters
+        *
+        *
+        */
 	public function get_parameters () 
 	{
-		/*$this->parameters = array();
-		$query = $this->db->placehold("SELECT parameters_id, stock_parameters FROM __parameters");
-		$this->db->query($query);
-		$results = $this->db->results();
-		foreach ($results as $result) {
-			$this->parameters[$result->parameters_id] = $result;
-		}*/
-		      $parameters = array();
+		$parameters = array();
                 foreach($this->parameters as $id=>$parameter){
 			$parameters[$id] = $parameter;
 		}
-        	//return $results;
 		return $parameters;
 		
 	}

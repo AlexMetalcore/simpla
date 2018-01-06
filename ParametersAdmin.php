@@ -15,7 +15,6 @@ class ParametersAdmin extends Simpla
                                               $parameters[$i] = new stdClass;
                                                 $parameters[$i]->$n = $v;
 				}
-		$parameters_ids = array();
 		foreach ($parameters as $parameter) {
 			if($parameter->parameters_id){
 		$this->parameters->update_parameter($parameter->parameters_id, $parameter);
