@@ -3,7 +3,7 @@
 /**
 * Simpla CMS
 *
-* @copyright   2011 Alexandr Alexandrov
+* @copyright   2018 Alexandr Alexandrov
 * @link                http://php.net
 * @author              Alexandr Alexandrov
 *
